@@ -1,0 +1,91 @@
+import groovy.text.GStringTemplateEngine
+import org.freecompany.redline.payload.*
+import org.freecompany.redline.header.*
+
+defaultTasks 'clean', 'rpm'
+
+buildscript {
+    ext {
+        env = System.getenv()
+        buildNumber = env.BUILD_NUMBER ? env.BUILD_NUMBER.toString() : ((int) (System.currentTimeMillis() / 1000)).toString()
+        BASE_REPO_URL = hasProperty('BASE_REPO_URL') ? BASE_REPO_URL : 'http://10.35.178.198:8081/artifactory'
+        PLUGINS_REPO = hasProperty('PLUGINS_REPO') ? asmnext - trunk - external : 'plugins-release'
+        PLUGINS_REPO_URL = hasProperty('PLUGINS_REPO_URL') ? PLUGINS_REPO_URL : "${BASE_REPO_URL}/${PLUGINS_REPO}"
+        rpm_packageName = env.RPM_PACKAGENAME ? env.RPM_PACKAGENAME : 'Dell-ASM-asm-deployer'
+        rpm_description = env.RPM_DESCRIPTION ? env.RPM_DESCRIPTION : 'asm-deployer for Dell ASM'
+        rpm_summary = env.RPM_SUMMARY ? env.RPM_SUMMARY : 'asm-deployer for Dell ASM'
+        rpm_version = env.RPM_VERSION ? env.RPM_VERSION : '7.5.0'
+        rpm_vendor = env.RPM_VENDOR ? env.RPM_VENDOR : 'Dell, Inc.'
+        rpm_url = env.RPM_URL ? env.RPM_URL : 'http://www.dell.com/'
+        rpm_license = env.RPM_LICENSE ? env.RPM_LICENSE : 'DELL END USER LICENSE AGREEMENT - TYPE A'
+        rpm_packager = env.RPM_PACKAGER ? env.RPM_PACKAGER : 'vsd_buildmeisters'
+    }
+
+    repositories {
+        maven {
+            url PLUGINS_REPO_URL
+        }
+    }
+    dependencies {
+        classpath 'org.redline-rpm:redline:1.1.12'
+    }
+}
+
+
+task rpm() << {
+    File rpmDestinationDirectory = new File("${buildDir}/distributions")
+    if (!rpmDestinationDirectory.isDirectory()) {
+        rpmDestinationDirectory.mkdirs()
+    }
+
+    // write dell product version and release to a properties file 
+    // and to a profile.d file and include that file in the rpm
+    File productPropertiesFile = new File("${buildDir}/${project.rpm_packageName}.properties")
+    productPropertiesFile << "VERSION=$project.rpm_version\n"
+    productPropertiesFile << "RELEASE=$project.buildNumber\n"
+    File profile_d_file = new File("${buildDir}/${project.rpm_packageName}.sh")
+    profile_d_file << "${project.rpm_packageName.tr('-', '_')}_VERSION=$project.rpm_version\n"
+    profile_d_file << "export ${project.rpm_packageName.tr('-', '_')}_VERSION\n"
+    profile_d_file << "${project.rpm_packageName.tr('-', '_')}_RELEASE=$project.buildNumber\n"
+    profile_d_file << "export ${project.rpm_packageName.tr('-', '_')}_RELEASE\n"
+
+    org.freecompany.redline.Builder rpmBuilder = new org.freecompany.redline.Builder()
+
+    // Depends on razor rpm having set up razor user and torquebox
+    rpmBuilder.addDependencyMore('Dell-ASM-razor-server', '1.7.8')
+
+    // Directory where REST service will write deployment information
+    rpmBuilder.addDirectory("/opt/Dell/ASM/deployments", 0775, Directive.NONE, 'razor', 'razor')
+
+    // Install directory.
+    // Installed as root:razor with 0775 so that torquebox can write the Gemfile.lock file.
+    // Torquebox should not need to write any other files into /opt/asm-deployer
+    rpmBuilder.addDirectory("/opt/asm-deployer", 0775, Directive.NONE, 'root', 'razor')
+
+    // Add files copied from https://github.com/dell-asm/asm-deployer
+    fileTree(dir: '../asm-deployer', include: '**').visit {
+        if (it.file.isDirectory() && !it.file.name.equals(".svn")) {
+            rpmBuilder.addDirectory("/opt/asm-deployer/${it.path}", 0755, Directive.NONE, 'root', 'razor')
+        } else if (it.file.isFile()) {
+            rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0644, Directive.NONE, 'root', 'razor')
+        }
+    }
+
+    rpmBuilder.setPackage(project.rpm_packageName, project.rpm_version, project.buildNumber.toString())
+    rpmBuilder.setType(RpmType.BINARY)
+    rpmBuilder.setPlatform(Architecture.NOARCH, 'LINUX')
+    rpmBuilder.setSummary(project.rpm_summary)
+    rpmBuilder.setDescription(project.rpm_description)
+    rpmBuilder.setBuildHost('localhost')
+    rpmBuilder.setLicense(project.rpm_license)
+    rpmBuilder.setGroup('Enterprise Systems Management')
+    rpmBuilder.setDistribution('')
+    rpmBuilder.setVendor(project.rpm_vendor)
+    rpmBuilder.setPackager(project.rpm_packager)
+    rpmBuilder.setUrl(project.rpm_url)
+    println rpmBuilder.build(rpmDestinationDirectory)
+}
+
+task clean(type: Delete) {
+    delete buildDir
+}
