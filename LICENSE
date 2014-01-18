@@ -1,73 +1,201 @@
-DELL END USER LICENSE AGREEMENT - TYPE A
-APPLICATION SOFTWARE 
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
 
-THIS IS A LEGAL AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR AN ENTITY) AND DELL PRODUCTS L.P., A TEXAS LIMITED PARTNERSHIP, OR DELL GLOBAL B.V. (SINGAPORE BRANCH), ON BEHALF OF DELL INC. AND ITS WORLDWIDE SUBSIDIARIES AND AFFILIATES (COLLECTIVELY, "Dell" OR “DELL”), WHICH GOVERNS YOUR USE OF THE SOFTWARE. THE SOFTWARE SHALL MEAN COLLECTIVELY THE SOFTWARE PROGRAM, THE ASSOCIATED MEDIA, PRINTED MATERIALS, ONLINE OR ELECTRONIC DOCUMENTATION, AND ANY COPIES THEREOF, TO WHICH THIS AGREEMENT IS ATTACHED OR OTHERWISE ASSOCIATED (the “Software” or “SOFTWARE”). PLEASE READ THE TERMS AND CONDITIONS OF THIS AGREEMENT CAREFULLY, INCLUDING, WITHOUT LIMITATION, ANY SUPPLEMENTAL TERMS AND CONDITIONS APPEARING OR REFERENCED BELOW, WHICH ARE HEREBY MADE PART OF THIS END USER LICENSE AGREEMENT (COLLECTIVELY, “EULA”), BEFORE DOWNLOADING, INSTALLING, ACTIVATING AND/OR OTHERWISE USING THE SOFTWARE. BY EXPRESSLY ACCEPTING THESE TERMS OR DOWNLOADING, INSTALLING, ACTIVATING AND/OR OTHERWISE USING THE SOFTWARE, YOU ARE AGREEING THAT YOU HAVE READ, AND THAT YOU AGREE TO COMPLY WITH AND TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS EULA AND ALL APPLICABLE LAWS AND REGULATIONS IN THEIR ENTIRETY WITHOUT LIMITATION OR QUALIFICATION. IF YOU DO NOT AGREE TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS EULA, THEN YOU MAY NOT DOWNLOAD, INSTALL, ACTIVATE OR OTHERWISE USE ANY OF THE SOFTWARE AND YOU MUST PROMPTLY RETURN THE SOFTWARE AND ANY HARDWARE TO WHICH IT IS ATTACHED, AS DIRECTED BY DELL OR ITS RESELLER (IF APPLICABLE) FOR A FULL REFUND. IF YOU ARE AN INDIVIDUAL REPRESENTING AN ENTITY, YOU ACKNOWLEDGE THAT YOU HAVE THE APPROPRIATE AUTHORITY TO ACCEPT THESE TERMS AND CONDITIONS ON BEHALF OF SUCH ENTITY.
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
-1. License. Provided that Dell receives timely payment for the Software and you comply with the terms, conditions and restrictions of this EULA (as a condition to the grant below), Dell hereby grants you a limited, personal, nonexclusive, nontransferable, nonassignable license, without rights to sublicense, to install or have installed, display and use the Software (in object code only) solely for internal business purposes, only on as many computers, devices and/or in such configurations as expressly permitted by Dell (e.g., as set forth in the applicable Dell sales quote or invoice). The terms and conditions of this EULA will govern use of the Software and any upgrades, updates, patches, hotfixes, modules, routines, feature enhancements and/or additional versions of the Software provided by Dell, at Dell’s sole discretion, that replace and/or supplement the original Software (collectively, “Update”), unless such Update is accompanied by or references a separate license agreement in which case the terms and conditions of that agreement will govern. If this EULA governs your use of an Update, such Update shall be considered Software for purposes of this EULA. Unless earlier terminated as provided herein, the term of each individual license granted under this EULA begins on the date of acceptance of this EULA, as described above, and continues only for such period as you have purchased, in the case of a term license, and is perpetual if no term is specified. You may use only portions of Software for which Dell has been paid the applicable license fee.
+   1. Definitions.
 
-2. License Limitations. You may not copy the Software except for a reasonable number of copies solely as needed for backup or archival purposes or as otherwise expressly permitted in Section 1 “License” above. You may not modify or remove any titles, trademarks or trade names, copyright notices, legends, or other proprietary notices or markings on or in the Software. The rights granted herein are limited to Dell's and its licensors' and suppliers’ intellectual property rights in the Software and do not include any other third party’s intellectual property rights. If the Software was provided to you on removable media (e.g., CD, DVD, or USB drive), you may own the media on which the Software is recorded but Dell, Dell's licensor(s) and/or supplier(s) retain ownership of the Software itself and all related intellectual property rights. You are not granted any rights to any trademarks or service marks of Dell. This EULA does not apply to any third party software that is not included as part of the Software. The use of any other software, including any software package or file, whether licensed to you separately by Dell or by a third party, is subject to the terms and conditions that come with or are associated with such software.
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
 
-3. Rights Reserved. THE SOFTWARE IS LICENSED, NOT SOLD. Except for the license expressly granted in this EULA, Dell, on behalf of itself and its licensors and suppliers, retains all right, title, and interest in and to the Software and in all related content, materials, copyrights, trade secrets, patents, trademarks, derivative works and any other intellectual and industrial property and proprietary rights, including registrations, applications, renewals and extensions of such rights (the "Works"). The rights in these Works are valid and protected in all forms, media and technologies existing now or hereafter developed and any use other than as contemplated herein, including the reproduction, modification, distribution, transmission, adaptations, translation, display, republication or performance of the Works, except as specifically permitted herein, is strictly prohibited. Dell, on behalf of itself and its licensors and suppliers, retains all rights not expressly granted herein.
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
 
-4. Restrictions. Except as otherwise provided herein or expressly agreed by Dell, you may not, and will not allow a third party to (A) sell, lease, license, sublicense, assign, distribute or otherwise transfer or encumber in whole or in part the Software; (B) provide, make available to, or permit use of the Software in whole or in part by, any third party, including contractors, without Dell's prior written consent, unless such use by the third party is solely on your behalf, is strictly in compliance with the terms and conditions of this EULA, and you are liable for any breach of this EULA by such third party (a “Permitted Third Party”); (C) copy, reproduce, republish, upload, post or transmit the Software in any way; (D) decompile, disassemble, reverse engineer, or otherwise attempt to derive source code (or underlying ideas, algorithms, structure or organization) from the Software program, in whole or in part; (E) modify or create derivative works based upon the Software (except as set forth in Section 13 – Development Tools); (F) use the Software on a service bureau, rental or managed services basis or permit other individuals or entities to create Internet "links" to the Software or "frame" or "mirror" the Software on any other server or wireless or Internet-based device; (G) use Software that was loaded by Dell onto specific hardware (an “Appliance”) separately from such Appliance; or (H) use the Software to create a competitive offering . You may not, and will not allow a Permitted Third Party to, use the Software in excess of the number of licenses expressly authorized by Dell. In addition, you may not share the results of any benchmarking of the Software without Dell’s prior written consent.
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
 
-5. Compliance. You will certify in writing, upon reasonable request by Dell, that all use of Software is in compliance with the terms of this EULA, indicating the number of Software licenses deployed at that time. You grant Dell, or an agent selected by Dell, the right to perform a reasonable audit of your compliance with this EULA during normal business hours. You agree to cooperate and provide Dell with all records reasonably related to your compliance with this EULA. If, as a result of the audit, a deficiency of greater than five percent (5%) is found in the license fees paid, then you shall bear the total cost of the audit, in addition to any other liabilities you may have.
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
 
-6. Support and Subscription Services Not Included. Dell does not provide any maintenance or support services under this EULA. Maintenance and support services, if any, are provided under a separate agreement, which may be located at www.dell.com/servicecontracts/global. Additionally, this EULA, in and of itself, does not entitle you to any Updates at any time in the future.
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
 
-7. Termination. Dell may terminate this EULA immediately and without prior notice if you fail to comply with any term or condition of this EULA or if Dell does not receive timely payment for the licenses to the Software or for the hardware to which it is attached, if any. In addition, Dell may terminate any license to Software distributed for free at any time in its sole discretion. Either party may terminate this EULA at any time by providing at least ninety (90) days prior written notice to the other party. In the event of termination of this EULA, all licenses granted hereunder shall automatically terminate and you must immediately cease use of the Software and return or destroy all copies of the Software. The parties recognize and agree that their obligations under Sections 2, 3, 4, 7, 10, 11, 12, 13, 14, 16, 18, 19, 20, 21, 24 and 25 of this EULA, as well as obligations for payment, shall survive the cancellation, termination and/or expiration of this EULA, and/or the licenses granted hereunder.
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
 
-8. Export, Import and Government Restrictions. You are advised that the Software is subject to U.S. export laws as well as the laws of the country where it is delivered or used. You agree to abide by these laws. Under these laws, the Software may not be sold, leased or transferred to restricted countries (currently Cuba, Iran, North Korea, Sudan and Syria), restricted end-users, or for restricted end-uses. You specifically agree that the Software will not be used for activities related to weapons of mass destruction, including but not limited to, activities related to the design, development, production or use of nuclear materials, nuclear facilities, or nuclear weapons, missiles or support of missile projects, or chemical or biological weapons. You understand that certain functionality of the Software, such as encryption or authentication, may be subject to import restrictions in the event you transfer the Software from the country of delivery and you are responsible for complying with applicable restrictions.
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
 
-The Software and documentation are "commercial items" as that term is defined at 48 C.F.R. 2.101, consisting of "commercial computer software" and "commercial computer software documentation" as such terms are used in 48 C.F.R. 12.212. Consistent with 48 C.F.R. 12.212 and 48 C.F.R. 227.7202-1 through 227.7202-4, all U.S. Government end users acquire the Software and documentation with only those rights set forth herein. Contractor/manufacturer is Dell Products L.P., One Dell Way, Round Rock, Texas 78682.
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
 
-9. Limited Warranty. Unless otherwise provided in the limited warranties for the Software found at http://content.dell.com/us/en/home/terms-of-sale-commercial-and-public-sector-warranties.aspx, or if outside of the United States, posted at your regional Dell.com website, Dell warrants that it has the right to grant the licenses to the Software, and except as set forth in Sections 14 and 16 below, that such Software will substantially conform in material respects to the functional specifications and official documentation provided by Dell with the Software. This limited warranty is not transferable and extends only for thirty (30) days from the date of delivery of the Software. This limited warranty does not cover damages, defects, malfunctions or failures caused by any unauthorized modification by you, or your agents, of the Software; any abuse, misuse or negligent acts of you; modification by you of any interfaces or any software or hardware interfacing with the Software; or any failure by you to follow Dell’s installation, operation or maintenance instructions. EXCEPT FOR THE PRECEDING EXPRESS LIMITED WARRANTY, DELL MAKES, AND YOU RECEIVE, NO OTHER WARRANTIES RELATED TO THE SOFTWARE WHETHER EXPRESS, IMPLIED OR STATUTORY, AND DELL SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. DELL DOES NOT WARRANT THAT THE FUNCTIONS OF THE SOFTWARE WILL MEET YOUR REQUIREMENTS OR THAT OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR FREE. YOU ASSUME RESPONSIBILITY FOR SELECTING THE SOFTWARE AND THE RESULTS ACHIEVED. YOUR SOLE AND EXCLUSIVE REMEDY, AND DELL’S ENTIRE LIABILITY, FOR BREACH OF THE WARRANTIES PROVIDED HEREIN, IS FOR DELL, AT ITS SOLE DISCRETION, TO EITHER USE COMMERCIALLY REASONABLE EFFORTS TO REMEDY ANY NON-CONFORMANCE OR TO PROVIDE A REFUND OF THE LICENSE FEES RECEIVED BY DELL FOR THE SOFTWARE. THIS DISCLAIMER OF WARRANTY MAY NOT BE VALID IN SOME JURISDICTIONS AND YOU MAY HAVE WARRANTY RIGHTS UNDER LAW WHICH MAY NOT BE WAIVED OR DISCLAIMED. ANY SUCH WARRANTY EXTENDS ONLY FOR THIRTY (30) DAYS FROM THE DATE OF DELIVERY OF THE SOFTWARE (UNLESS LOCAL LAW PROVIDES OTHERWISE).
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
 
-10. Limitation of Liability. DELL WILL NOT BE LIABLE FOR ANY INCIDENTAL, INDIRECT, PUNITIVE, SPECIAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF OR IN CONNECTION WITH THIS EULA AND/OR THE SOFTWARE. DELL SHALL HAVE NO LIABILITY FOR THE FOLLOWING: (A) LOSS OF REVENUE, INCOME, PROFIT OR SAVINGS, (B) LOST OR CORRUPTED DATA OR SOFTWARE, LOSS OF USE OF SYSTEM(S) OR NETWORK(S), OR THE RECOVERY OF SUCH, (C) LOSS OF BUSINESS OPPORTUNITY, (D) BUSINESS INTERRUPTION OR DOWNTIME, (E) LOSS OF GOODWILL OR REPUTATION, OR (F) SOFTWARE NOT BEING AVAILABLE FOR USE OR THE PROCUREMENT OF SUBSTITUTE SOFTWARE OR GOODS.
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
 
-NOTWITHSTANDING ANYTHING TO THE CONTRARY SET FORTH IN THIS EULA, DELL’S TOTAL LIABILITY FOR ANY AND ALL CLAIMS ARISING OUT OF OR IN CONNECTION WITH THIS EULA AND/OR THE SOFTWARE SHALL NOT EXCEED THE TOTAL AMOUNT RECEIVED BY DELL FOR THE PARTICULAR SOFTWARE GIVING RISE TO SUCH CLAIM(S).
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
 
-The foregoing limitations, exclusions and disclaimers shall apply to any and all claims, regardless of whether the claim(s) for such damages is based in contract, warranty, strict liability, negligence, tort or otherwise. Insofar as applicable law prohibits any limitation on liability herein, the parties agree that such limitation will be automatically modified, but only to the extent so as to make the limitation compliant with applicable law. The parties agree that the limitations on liabilities set forth herein are agreed allocations of risk and such limitations will apply notwithstanding the failure of essential purpose of any limited remedy and even if a party has been advised of the possibility of any such failure or liability.
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
 
-DELL SHALL NOT BE LIABLE TO YOU FOR ANY CLAIM BROUGHT MORE THAN TWO YEARS AFTER THE CAUSE OF ACTION FOR SUCH CLAIM FIRST AROSE.
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
 
-11. Indemnification. Except where prohibited by applicable law, Dell shall defend you against any third-party claim or action that the Software (specifically excluding open source software) infringes or misappropriates that third party’s patent, copyright, trade secret, or other intellectual property rights (“Indemnified Claims”). In addition, if Dell receives prompt notice of an Indemnified Claim that, in Dell’s reasonable opinion, is likely to result in an adverse ruling, then Dell will at its sole discretion, (A) obtain a right for you to continue using such Software; (B) modify such Software to be non-infringing; (C) replace such Software with a non-infringing substitute; or (D) provide a reasonable depreciated refund for the allegedly infringing Software. Notwithstanding the foregoing, Dell shall have no obligation under this Section for Indemnified Claims resulting or arising from: (i) modifications of the Software that were not performed by or on behalf of Dell; (ii) your unauthorized use of the Software, or the combination or operation of the Software in connection with a third-party product, software or service (the combination of which causes the claimed infringement); (iii) your failure to incorporate free Software updates or upgrades that would have avoided the alleged infringement; or (iv) Dell’s compliance with your specifications or directions, including the incorporation of any software or other materials or processes provided by or requested by you (collectively, “Excluded Indemnified Claims”). Dell’s duty to indemnify and defend is contingent upon: (a) your providing Dell with prompt written notice of the third-party claim or action, (b) Dell having the right to solely control the defense and settlement of such claim or action, and (c) your cooperation with Dell in defending and resolving such claim or action. This Section states your exclusive remedies for any third-party intellectual property claim or action, and nothing in this EULA or elsewhere will obligate Dell to provide any greater indemnity to you. You, at your expense, shall defend and indemnify Dell against any claim, action or proceeding brought against Dell which arises from or is in any manner connected with any of the Excluded Indemnified Claims.
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
 
-12. Confidentiality. You agree to: (A) not use Confidential Information except as necessary to exercise the rights herein and (B) use best efforts to preserve and protect the confidentiality of the Confidential Information. "Confidential Information" means any oral, written, graphic or machine-readable information disclosed by Dell that is (i) identified as confidential; (ii) designated in writing to be confidential or proprietary; or (iii) should be reasonably understood to be confidential. Confidential Information includes the Software and its trade secrets, including but not limited to source code, the development status of the Software, the appearance, content and flow of the user interface of the Software, and the content and documentation of the Software. Confidential Information does not include information that is (a) publicly available other than through a breach of this EULA; (b) known to you prior to such disclosure; or (c) subsequently lawfully obtained by you from a third party that has no obligations of confidentiality. You agree that, without Dell’s prior written consent, you will not grant access to any Dell Confidential Information to any persons or entities except for your employees and agents who have a business need to have such access and who are obligated to maintain the confidentiality thereof as set forth herein. These obligations do not expire. In some limited circumstances, Dell may need to engage a third party to fulfill its obligations to you under this EULA. You agree that Dell may provide your information to such third party for that purpose. Dell may obtain information related to your use of the Software and you agree that Dell may use such information in aggregate form in an anonymous manner in support of Dell’s marketing activities related to the Software. Any feedback, recommended changes or suggestions made by you or other information that is provided to Dell relating to the Software shall be owned by Dell and considered Dell Confidential Information.
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
 
-13. Development Tools. If the Software includes development tools, such as scripting tools, APIs ( application programming interface s), or sample scripts (collectively “Development Tools”), you may use such Development Tools to create new scripts and code for the purpose of customizing your use of the Software (within the parameters set forth in this EULA and within the parameters set forth in the Development Tools themselves ) and for no other purpose. Notwithstanding anything to the contrary set forth in this EULA, no warranty, indemnity or technical support is provided for and Dell accepts no liability with regard to such sample scripts contained in such Development Tools or scripts or other code written by you or any third party.
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
 
-14. Evaluation Licenses. If you have received Software for evaluation purposes (“Evaluation Software”), despite anything to the contrary in this EULA, you may use the Evaluation Software solely for such limited evaluation period and for internal evaluation purposes only. You acknowledge that Dell may terminate your right to evaluate or use the Evaluation Software, for any or no reason, effective immediately upon notice to you. NOTWITHSTANDING ANYTHING TO THE CONTRARY IN THIS EULA, THE EVALUATION SOFTWARE IS PROVIDED TO YOU "AS IS" WITHOUT INDEMNITY OR WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE. DELL BEARS NO LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, PUNITIVE, SPECIAL OR CONSEQUENTIAL DAMAGES RESULTING FROM USE (OR ATTEMPTED USE) OF THE EVALUATION SOFTWARE THROUGH AND AFTER THE EVALUATION PERIOD AND HAS NO DUTY TO PROVIDE SUPPORT OF SUCH SOFTWARE TO YOU.
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
 
-15. Hosted and Internet-Accessible Software. Some or all of the Software may be remotely hosted or accessible to you through the internet (“Hosted Software”). In such case, Dell may suspend, terminate, withdraw, or discontinue all or part of the Hosted Software or your access to the Hosted Software upon receipt of a subpoena or law-enforcement request, or when Dell believes, in its sole discretion, that you have breached any term of this EULA or are involved in any fraudulent, misleading, or illegal activities. Dell may modify the Hosted Software at any time with or without prior notice to you. Dell may perform scheduled or unscheduled repairs or maintenance, or remotely patch or upgrade the Hosted Software installed on its and your system(s), which may temporarily degrade the quality of the Hosted Software or result in a partial or complete outage of the Hosted Software. Updates, patches or alerts may be delivered from Dell servers, which may be located outside of your country. Dell provides no assurance that you will receive advance notification of such activities or that your use of the Hosted Software will be uninterrupted or error-free.
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
 
-16. Open Source Software. The Software may come bundled or otherwise be distributed with open source software, which is subject to the terms and conditions of the specific license under which the open source software is distributed. THIS OPEN SOURCE SOFTWARE IS PROVIDED BY DELL "AS IS" WITHOUT ANY WARRANTY, EXPRESS, IMPLIED, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. NOTWITHSTANDING ANYTHING TO THE CONTRARY IN THIS EULA, AS IT RELATES TO ANY AND ALL CLAIMS ARISING OUT OF OR IN CONNECTION WITH OPEN SOURCE SOFTWARE, DELL SHALL HAVE NO LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, PUNITIVE, SPECIAL OR CONSEQUENTIAL DAMAGES. Under certain open source software licenses, you are entitled to obtain the corresponding source files. You may find corresponding source files for the Software at http://opensource.dell.com or other locations that may be specified to you by Dell.
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
 
-17. Excluded Data. You acknowledge that Software provided under this EULA is not designed with security and access management for the processing and/or storage of the following categories of data: (A) data that is classified and/or used on the U.S. Munitions list, including software and technical data; (B) articles, services and related technical data designated as defense articles and defense services; (C) ITAR (International Traffic in Arms Regulations) related data; and (D) personally identifiable information that is subject to heightened security requirements as a result of your internal policies or practices or by law (collectively referred to as “Excluded Data”). You hereby agree that you are solely responsible for reviewing data that it will provide to Dell (or to which Dell will have access) to ensure that it does not contain Excluded Data.
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
 
-18. Right to Preliminary and Injunctive Relief. You agree that money damages would be an inadequate remedy for Dell in the event of a breach or threatened breach by you of the provisions set forth in this EULA; therefore, you agree that in the event of a breach or threatened breach of any such provisions, Dell may, in addition to any other remedies to which it is entitled, be entitled to such preliminary or injunctive relief (including an order prohibiting you from taking actions in breach of such provisions) and specific performance as may be appropriate to preserve all of Dell’s rights. All rights and remedies afforded Dell by law shall be cumulative and not exclusive.
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
 
-19. Choice of Law and Language. This EULA shall be governed by the laws of the State of Texas, USA, to the exclusion of the UN Convention on Contracts for the International Sale of Goods. You acknowledge that the headquarters of the Dell family of companies is located in Texas, and that the software licensed under this EULA and the related products marketed in connection with such software were in substantial part conceived, developed, or marketed by Dell personnel in the United States. Further, you acknowledge, agree and stipulate that the laws of the State of Texas bear a substantial relationship to this EULA and that the selection of Texas law to govern this EULA and the license of the Software hereunder is reasonable and appropriate, and you consent to the selection of such law to govern this EULA and the relationship of the parties hereto. This EULA has been agreed to only in the English language, which version of this EULA shall be controlling regardless of whether any translations of this EULA have been prepared or exchanged. As an exception to the preceding sentence, if Dell provides this EULA to you only in a non-English language version, then such non-English language version shall control. Otherwise, you acknowledge and represent that you have carefully reviewed this EULA with the involvement and assistance of your employees, advisors, and/or legal counsel fluent in the English language, that you have consulted with local legal counsel and counsel competent to render advice with respect to transactions governed by the law applicable to this EULA, that you have no questions regarding the meaning or effect of any of this EULA’s terms, and that you have obtained high-quality translations of this EULA for use by you or any of your team who are not fluent in the English language, with the understanding that you alone shall bear the risk of any misunderstandings that may arise as a result of such translation. All communications in connection with this EULA shall be in the English language.
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
 
-Les parties ont demandé que cette convention ainsi que tous les documents qui s'y rattachent soient rédigés en anglais.
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
 
-20. Dispute Resolution and Binding Arbitration. ANY CLAIM, DISPUTE, OR CONTROVERSY (WHETHER IN CONTRACT, TORT, OR OTHERWISE, WHETHER PREEXISTING, PRESENT OR FUTURE, AND INCLUDING STATUTORY, COMMON LAW, INTENTIONAL TORT AND EQUITABLE CLAIMS) BETWEEN YOU AND DELL arising out of or in connection with this EULA, or the breach, termination or validity thereof shall be finally settled under the Rules of Arbitration of the International Chamber of Commerce (“ICC”) by one or more arbitrators appointed in accordance with such rules. The arbitration shall be conducted in the English language. The place of the arbitration shall be a commercial center reasonably chosen by the arbitration panel in a third country so as to ensure that the award resulting from the arbitration shall be of an international character and enforceable under the New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards. The arbitration panel shall be empowered to grant whatever relief would be available in court, including without limitation preliminary relief, injunctive relief and specific performance. Any award of the arbitration panel shall be final and binding immediately when rendered, and judgment on the award may be entered in any court of competent jurisdiction. Neither you nor Dell shall be entitled to join, consolidate, or include any claims belonging to or alleged or arising from, by, or on behalf of any third party to an arbitration brought hereunder. The individual (non-class) nature of this dispute resolution provision goes to the essence of the parties' dispute resolution agreement, and if found unenforceable, the entire arbitration and dispute resolution provision shall be void. Notwithstanding the foregoing, Dell may apply to any relevant government agency or any court of competent jurisdiction to preserve its rights under this EULA and to obtain any injunctive or preliminary relief, or any award of specific performance, to which it may be entitled, either against you or against a non-party; provided, however, that no such administrative or judicial authority shall have the right or power to render a judgment or award (or to enjoin the rendering of an arbitral award) for damages that may be due to or from either party under this EULA, which right and power shall be reserved exclusively to an arbitration panel proceeding in accordance herewith. Furthermore, the parties agree that the provisions of the Uniform Computer Information Transactions Act (“UCITA”), as it may have been or hereafter may be in effect in any jurisdiction, shall not apply to this EULA, and the parties waive any and all rights they may have under any laws(s) adopting UCITA in any form.
+   END OF TERMS AND CONDITIONS
 
-21. No Waiver. No waiver of breach or failure to exercise any option, right, or privilege under the terms of this EULA on any occasion by Dell shall be construed to be a waiver of a subsequent breach or right to exercise any option, right, or privilege.
+   APPENDIX: How to apply the Apache License to your work.
 
-22. Excused Performance. Dell shall not be responsible for any delay or failure in performance of any part of this EULA to the extent that such delay or failure is caused by fire, flood, explosion, war, embargo, governmental intervention, civil, or military authority, act of God, act or omission of carriers, labor disruption, failure of the internet or other similar causes beyond its control.
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!) The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
 
-23. No Assignment. Customer may not assign or transfer its interests, rights or obligations under this EULA, in whole or in part, whether voluntarily, by contract, or by merger (whether that party is the surviving or disappearing entity), stock or asset sale, consolidation, dissolution, through government action or order, or otherwise. Any attempt to assign this EULA without prior written consent from an authorized executive officer of Dell shall be null and void.
+   Copyright 2014 Dell Inc.
 
-24. Entire Agreement. Unless you have entered into another written agreement with respect to the Software which has been signed by you and an authorized representative of Dell and which conflicts with the terms of this EULA, you agree that this EULA supersedes all prior written or oral agreements, warranties or representations, including any and all other click-wrap, shrink-wrap or similar licenses or agreements, with respect to use of the Software. No amendment to or modification of this EULA, in whole or in part, will be valid or binding unless it is in writing and executed by authorized representatives of both parties. If any term (or part thereof) of this EULA is found to be invalid or unenforceable, the remaining provisions (including other valid parts within the effected term) will remain effective. You agree that any principle of construction or rule of law that provides that an agreement shall be construed against the drafter shall not apply to the terms and conditions of this EULA. No rights may arise by implication or estoppel, other than those expressly granted herein.
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
 
-25. Notices. Notice to Dell under this EULA must be in writing and sent to the address below or to such other address (including facsimile or e-mail) as specified in writing, and will be effective upon receipt.
+       http://www.apache.org/licenses/LICENSE-2.0
 
-Dell Inc., Attn: Dell Legal
-One Dell Way, Round Rock, Texas 78682
-
-Last rev. 102312
-Supplemental Terms and Conditions:
-END OF DOCUMENT
-
-Copyright (c) Dell Inc. 2014
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
