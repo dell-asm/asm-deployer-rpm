@@ -1,4 +1,4 @@
 asm-deployer-rpm
 ================
 
-build script to create rpm for asm-deployer
+build script to create rpm for torquebox webapp asm-deployer
