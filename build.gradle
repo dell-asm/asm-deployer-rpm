@@ -55,17 +55,17 @@ task rpm() << {
     rpmBuilder.addDependencyMore('Dell-ASM-razor-server', '1.7.8')
 
     // Directory where REST service will write deployment information
-    rpmBuilder.addDirectory("/opt/Dell/ASM/deployments", 0775, Directive.NONE, 'razor', 'razor')
+    rpmBuilder.addDirectory("/opt/Dell/ASM/deployments", 0775, Directive.NONE, 'razor', 'razor', false)
 
     // Install directory.
     // Installed as root:razor with 0775 so that torquebox can write the Gemfile.lock file.
     // Torquebox should not need to write any other files into /opt/asm-deployer
-    rpmBuilder.addDirectory("/opt/asm-deployer", 0775, Directive.NONE, 'root', 'razor')
+    rpmBuilder.addDirectory("/opt/asm-deployer", 0775, Directive.NONE, 'root', 'razor', false)
 
     // Add files copied from https://github.com/dell-asm/asm-deployer
     fileTree(dir: '../asm-deployer', include: '**').visit {
         if (it.file.isDirectory() && !it.file.name.equals(".svn")) {
-            rpmBuilder.addDirectory("/opt/asm-deployer/${it.path}", 0755, Directive.NONE, 'root', 'razor')
+            rpmBuilder.addDirectory("/opt/asm-deployer/${it.path}", 0755, Directive.NONE, 'root', 'razor', false)
         } else if (it.file.isFile()) {
             rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0644, Directive.NONE, 'root', 'razor')
         }
