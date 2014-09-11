@@ -54,6 +54,9 @@ task rpm() << {
     // Depends on razor rpm having set up razor user and torquebox
     rpmBuilder.addDependencyMore('Dell-ASM-razor-server', '1.7.8')
 
+    // Depends on nagios rpm to bring the correctly selinux tagged plugin dirs etc
+    rpmBuilder.addDependencyMore('nagios-common', '3.5.1')
+
     // Directory where REST service will write deployment information
     rpmBuilder.addDirectory("/opt/Dell/ASM/deployments", 0775, Directive.NONE, 'razor', 'razor', false)
 
@@ -70,6 +73,14 @@ task rpm() << {
             if ('lib/asm/scvmm_macaddress.rb' == it.path || 
                 'scripts/puppet_certname.sh' == it.path) { 
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0755, Directive.NONE, 'root', 'razor')
+            } else if (it.path == "nagios/check-racadm.rb") {
+                rpmBuilder.addFile("/usr/lib64/nagios/plugins/check-racadm.rb", it.file, 0755, Directive.NONE, 'root', 'root')
+            } else if (it.path == "nagios/check-wsman.rb") {
+                rpmBuilder.addFile("/usr/lib64/nagios/plugins/check-wsman.rb", it.file, 0755, Directive.NONE, 'root', 'root')
+            } else if (it.path == "nagios/process_perf_data.rb") {
+                rpmBuilder.addFile("/usr/lib64/nagios/plugins/process_perf_data.rb", it.file, 0755, Directive.NONE, 'root', 'root')
+            } else if (it.path == "nagios/asm_nagios.cron") {
+                rpmBuilder.addFile("/etc/cron.d/asm_nagios", it.file, 0755, Directive.NONE, 'root', 'root')
             } else {
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0644, Directive.NONE, 'root', 'razor')
             }
@@ -88,6 +99,7 @@ task rpm() << {
     rpmBuilder.setVendor(project.rpm_vendor)
     rpmBuilder.setPackager(project.rpm_packager)
     rpmBuilder.setUrl(project.rpm_url)
+    rpmBuilder.setPostInstallScript(file('scripts/rpm/postInstall.sh').text)
     println rpmBuilder.build(rpmDestinationDirectory)
 }
 
