@@ -70,7 +70,8 @@ task rpm() << {
         if (it.file.isDirectory() && !it.file.name.equals(".svn")) {
             rpmBuilder.addDirectory("/opt/asm-deployer/${it.path}", 0755, Directive.NONE, 'root', 'razor', false)
         } else if (it.file.isFile()) {
-            if ('lib/asm/scvmm_macaddress.rb' == it.path || 
+            if ('lib/asm/scvmm_cluster_ip.rb' == it.path || 
+                'lib/asm/scvmm_macaddress.rb' == it.path || 
                 'scripts/puppet_certname.sh' == it.path) { 
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0755, Directive.NONE, 'root', 'razor')
             } else if (it.path == "nagios/nagios-export.rb") {
