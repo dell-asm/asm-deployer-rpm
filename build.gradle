@@ -87,6 +87,8 @@ task rpm() << {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check-wsman.rb", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/process_perf_data.rb") {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/process_perf_data.rb", it.file, 0755, Directive.NONE, 'root', 'root')
+            } else if (it.path == "nagios/process_nagios_status.rb") {
+                rpmBuilder.addFile("/usr/lib64/nagios/plugins/process_nagios_status.rb", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/asm_nagios.cron") {
                 rpmBuilder.addFile("/etc/cron.d/asm_nagios", it.file, 0644, Directive.NONE, 'root', 'root')
             } else {
