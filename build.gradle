@@ -56,6 +56,7 @@ task rpm() << {
 
     // Depends on nagios rpm to bring the correctly selinux tagged plugin dirs etc
     rpmBuilder.addDependencyMore('nagios-common', '3.5.1')
+    rpmBuilder.addDependencyMore('nagios-plugins-nrpe', '2.15')
 
     // Dependencies for the nagios plugins
     rpmBuilder.addDependencyMore('freeipmi', '1.2.1')
