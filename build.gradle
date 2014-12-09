@@ -55,11 +55,14 @@ task rpm() << {
     rpmBuilder.addDependencyMore('Dell-ASM-razor-server', '1.7.8')
 
     // Depends on nagios rpm to bring the correctly selinux tagged plugin dirs etc
-    rpmBuilder.addDependencyMore('nagios-common', '3.5.1')
+    rpmBuilder.addDependencyMore('nagios', '3.5.1')
     rpmBuilder.addDependencyMore('nagios-plugins-nrpe', '2.15')
+    rpmBuilder.addDependencyMore('nagios-plugins-ping', '1.4.16')
 
     // Dependencies for the nagios plugins
     rpmBuilder.addDependencyMore('freeipmi', '1.2.1')
+    rpmBuilder.addDependencyMore('ipmitool', '1.8.11')
+    rpmBuilder.addDependencyMore('pywbem', '0.7.0')
 
     // Directory where REST service will write deployment information
     rpmBuilder.addDirectory("/opt/Dell/ASM/deployments", 0775, Directive.NONE, 'razor', 'razor', false)
