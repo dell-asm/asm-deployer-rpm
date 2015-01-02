@@ -2,6 +2,9 @@ import groovy.text.GStringTemplateEngine
 import org.freecompany.redline.payload.*
 import org.freecompany.redline.header.*
 
+// https://github.com/nebula-plugins/gradle-ospackage-plugin/issues/59
+Contents.addBuiltinDirectory('/etc/httpd/conf.d/')
+
 defaultTasks 'clean', 'rpm'
 
 buildscript {
@@ -64,6 +67,12 @@ task rpm() << {
     rpmBuilder.addDependencyMore('ipmitool', '1.8.11')
     rpmBuilder.addDependencyMore('pywbem', '0.7.0')
 
+    // Graphite dependencies
+    rpmBuilder.addDependencyMore('graphite-web', '0.9.12')
+    rpmBuilder.addDependencyMore('graphite-web-selinux', '0.9.12')
+    rpmBuilder.addDependencyMore('python-whisper', '0.9.12')
+    rpmBuilder.addDependencyMore('python-carbon', '0.9.12')
+
     // Directory where REST service will write deployment information
     rpmBuilder.addDirectory("/opt/Dell/ASM/deployments", 0775, Directive.NONE, 'razor', 'razor', false)
 
@@ -84,6 +93,8 @@ task rpm() << {
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0755, Directive.NONE, 'root', 'razor')
             } else if (it.path == "nagios/nagios-export.rb") {
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0755, Directive.NONE, 'root', 'root')
+            } else if (it.path == "nagios/poll_idrac8_sensors.rb") {
+                rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/check-ipmi.rb") {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check-ipmi.rb", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/check-racadm.rb") {
@@ -96,6 +107,8 @@ task rpm() << {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/process_nagios_status.rb", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/asm_nagios.cron") {
                 rpmBuilder.addFile("/etc/cron.d/asm_nagios", it.file, 0644, Directive.NONE, 'root', 'root')
+            } else if (it.path == "nagios/graphite-web.conf") {
+                rpmBuilder.addFile("/etc/httpd/conf.d/asm-graphite-web.conf", it.file, 0644, Directive.NONE, 'root', 'root')
             } else {
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0644, Directive.NONE, 'root', 'razor')
             }
