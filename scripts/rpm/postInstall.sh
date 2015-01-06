@@ -16,6 +16,7 @@ then
   echo "TIME_ZONE = 'UTC'" >> /etc/graphite-web/local_settings.py
 
   python /usr/lib/python2.6/site-packages/graphite/manage.py syncdb --noinput
+  chown apache:apache /var/lib/graphite-web/graphite.db
 
   cat << EOF > /etc/carbon/storage-schemas.conf
 [carbon]
