@@ -23,6 +23,10 @@ then
 pattern = ^carbon\.
 retentions = 60:90d
 
+[asm_thresholds]
+pattern = ^asm\..+Threshold
+retentions = 1h:30d, 1d:5y
+
 [default]
 pattern = .*
 retentions = 5m:30d, 1h:1y, 1d:5y
