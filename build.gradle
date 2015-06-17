@@ -79,6 +79,13 @@ task rpm() << {
     // Directory for writing puppet device call log files
     rpmBuilder.addDirectory("/opt/Dell/ASM/device", 0775, Directive.NONE, 'razor', 'razor', false)
 
+    // SCVMM and Equallogic module discovery scripts write cache files here. SCVMM is being run
+    // by tomcat as the tomcat user. Equallogic is currently being run by puppet-script-device
+    // as root user. For now making this directory as world-writeable with sticky bit (like /tmp)
+    // so that different users can't clobber each other's files. Longer-term the scvmm script
+    // should also be run by puppet-script-device and then this could be owned by razor:razor 0755
+    rpmBuilder.addDirectory("/opt/Dell/ASM/cache", 1777, Directive.NONE, 'root', 'root', false)
+
     // Install directory.
     // Installed as root:razor with 0775 so that torquebox can write the Gemfile.lock file.
     // Torquebox should not need to write any other files into /opt/asm-deployer
