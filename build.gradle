@@ -84,7 +84,7 @@ task rpm() << {
     // as root user. For now making this directory as world-writeable with sticky bit (like /tmp)
     // so that different users can't clobber each other's files. Longer-term the scvmm script
     // should also be run by puppet-script-device and then this could be owned by razor:razor 0755
-    rpmBuilder.addDirectory("/opt/Dell/ASM/cache", 1777, Directive.NONE, 'root', 'root', false)
+    rpmBuilder.addDirectory("/opt/Dell/ASM/cache", 01777, Directive.NONE, 'root', 'root', false)
 
     // Install directory.
     // Installed as root:razor with 0775 so that torquebox can write the Gemfile.lock file.
