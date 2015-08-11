@@ -8,6 +8,12 @@
 /sbin/restorecon -v /usr/lib64/nagios/plugins/*
 
 # configure graphite
+touch /etc/carbon/storage-aggregation.conf
+
+/bin/sed -i 's:LOG_LISTENER_CONNECTIONS = True:LOG_LISTENER_CONNECTIONS = False:' /etc/carbon/carbon.conf
+/bin/sed -i 's:LOG_CACHE_QUEUE_SORTS = True:LOG_CACHE_QUEUE_SORTS = False:' /etc/carbon/carbon.conf
+/bin/sed -i 's:ENABLE_LOGROTATION = True:ENABLE_LOGROTATION = False:' /etc/carbon/carbon.conf
+
 grep -q ^SECRET_KEY /etc/graphite-web/local_settings.py
 
 if [ $? -eq 1 ]
@@ -31,9 +37,9 @@ retentions = 1h:30d, 1d:5y
 pattern = .*
 retentions = 5m:30d, 1h:1y, 1d:5y
 EOF
-  
+
   /bin/sed -i 's:^:#:' /etc/httpd/conf.d/graphite-web.conf
-  
+
   chkconfig carbon-cache on
 fi
 
