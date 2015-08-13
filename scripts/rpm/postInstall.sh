@@ -16,6 +16,11 @@ touch /etc/carbon/storage-aggregation.conf
 
 grep -q ^SECRET_KEY /etc/graphite-web/local_settings.py
 
+if [ -e "/opt/asm-deployer/Gemfile.lock" ]
+  then
+  chown root:razor "/opt/asm-deployer/Gemfile.lock" && chmod 0664 "/opt/asm-deployer/Gemfile.lock"
+fi
+
 if [ $? -eq 1 ]
 then
   echo "SECRET_KEY = '$(openssl rand 32 -hex)'" >> /etc/graphite-web/local_settings.py
@@ -42,4 +47,3 @@ EOF
 
   chkconfig carbon-cache on
 fi
-
