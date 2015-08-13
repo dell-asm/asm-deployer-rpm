@@ -21,6 +21,10 @@ if [ -e "/opt/asm-deployer/Gemfile.lock" ]
   chown root:razor "/opt/asm-deployer/Gemfile.lock" && chmod 0664 "/opt/asm-deployer/Gemfile.lock"
 fi
 
+if ! /opt/jruby-1.7.8/bin/gem list systemu | grep systemu ; then
+  /opt/jruby-1.7.8/bin/gem install --local /opt/Dell/gems/systemu-2.6.5.gem
+fi
+
 if [ $? -eq 1 ]
 then
   echo "SECRET_KEY = '$(openssl rand 32 -hex)'" >> /etc/graphite-web/local_settings.py
