@@ -14,15 +14,6 @@ touch /etc/carbon/storage-aggregation.conf
 /bin/sed -i 's:LOG_CACHE_QUEUE_SORTS = True:LOG_CACHE_QUEUE_SORTS = False:' /etc/carbon/carbon.conf
 /bin/sed -i 's:ENABLE_LOGROTATION = True:ENABLE_LOGROTATION = False:' /etc/carbon/carbon.conf
 
-if [ -e "/opt/asm-deployer/Gemfile.lock" ]
-  then
-  chown root:razor "/opt/asm-deployer/Gemfile.lock" && chmod 0664 "/opt/asm-deployer/Gemfile.lock"
-fi
-
-if ! /opt/jruby-1.7.8/bin/gem list systemu | grep systemu ; then
-  /opt/jruby-1.7.8/bin/gem install --local /opt/Dell/gems/systemu-2.6.5.gem
-fi
-
 grep -q ^SECRET_KEY /etc/graphite-web/local_settings.py
 
 if [ $? -eq 1 ]
