@@ -73,10 +73,6 @@ task rpm() << {
     rpmBuilder.addDependencyMore('python-whisper', '0.9.12')
     rpmBuilder.addDependencyMore('python-carbon', '0.9.12')
 
-    // TODO: find better way to package these gems
-    // Add systemu gem
-    rpmBuilder.addDirectory("/opt/Dell/gems", 0751, Directive.NONE, 'root', 'root', false)
-    rpmBuilder.addFile("/opt/Dell/gems/systemu-2.6.5.gem", file("files/systemu-2.6.5.gem"), 0644,Directive.NONE, 'root', 'root')
     // Directory where REST service will write deployment information
     rpmBuilder.addDirectory("/opt/Dell/ASM/deployments", 0775, Directive.NONE, 'razor', 'razor', false)
 
