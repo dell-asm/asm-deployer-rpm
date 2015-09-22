@@ -57,6 +57,9 @@ task rpm() << {
     // Depends on razor rpm having set up razor user and torquebox
     rpmBuilder.addDependencyMore('Dell-ASM-razor-server', '1.7.8')
 
+    //Depends on dell-asm-util gem (and any additional ones needed) to be installed
+    rpmBuilder.addDependencyMore('Dell-ASM-Gems', '0.1.0')
+
     // Depends on nagios rpm to bring the correctly selinux tagged plugin dirs etc
     rpmBuilder.addDependencyMore('nagios', '3.5.1')
     rpmBuilder.addDependencyMore('nagios-plugins-nrpe', '2.15')
