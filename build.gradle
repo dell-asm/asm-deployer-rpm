@@ -34,8 +34,19 @@ buildscript {
     }
 }
 
+// asm-deployer is expected to be checked out in a directory at the same level
+// as this directory. Copy it into the build directory, modifying the Gemfile
+// along the way to remove direct git dependencies since asm-deployer needs to
+// use the gems that are installed by the Dell-ASM-Gems rpm.
+task copyAsmDeployer(type: Copy) {
+    from "${projectDir}/../asm-deployer"
+    into "${buildDir}/files"
+    filesMatching("Gemfile", {
+        filter({ ln -> ln.replaceAll(/, :git => ['"].*['"]/, "") })
+    })
+}
 
-task rpm() << {
+task rpm(dependsOn: copyAsmDeployer) << {
     File rpmDestinationDirectory = new File("${buildDir}/distributions")
     if (!rpmDestinationDirectory.isDirectory()) {
         rpmDestinationDirectory.mkdirs()
@@ -98,7 +109,7 @@ task rpm() << {
     rpmBuilder.addDirectory("/opt/asm-deployer", 0775, Directive.NONE, 'root', 'razor', false)
 
     // Add files copied from https://github.com/dell-asm/asm-deployer
-    fileTree(dir: '../asm-deployer', include: '**').visit {
+    fileTree(dir: "${buildDir}/files", include: '**').visit {
         if (it.file.isDirectory() && !it.file.name.equals(".svn")) {
             rpmBuilder.addDirectory("/opt/asm-deployer/${it.path}", 0755, Directive.NONE, 'root', 'razor', false)
         } else if (it.file.isFile()) {
