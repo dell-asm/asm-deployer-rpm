@@ -87,6 +87,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
     rpmBuilder.addDependencyMore('python-whisper', '0.9.12')
     rpmBuilder.addDependencyMore('python-carbon', '0.9.12')
 
+    // iPXE source code for building iPXE ISOs
+    rpmBuilder.addDependencyMore('ipxe-devel', '20160117')
+
     // Directory where REST service will write deployment information
     rpmBuilder.addDirectory("/opt/Dell/ASM/deployments", 0775, Directive.NONE, 'razor', 'razor', false)
 
@@ -110,6 +113,10 @@ task rpm(dependsOn: copyAsmDeployer) << {
     // Installed as root:razor with 0775 so that torquebox can write the Gemfile.lock file.
     // Torquebox should not need to write any other files into /opt/asm-deployer
     rpmBuilder.addDirectory("/opt/asm-deployer", 0775, Directive.NONE, 'root', 'razor', false)
+
+    // Add NFS directories where built ISOs can be placed by asm-deployer
+    rpmBuilder.addDirectory("/var/nfs/iso", 0755, Directive.NONE, 'root', 'root', false)
+    rpmBuilder.addDirectory("/var/nfs/iso/generated", 0755, Directive.NONE, 'razor', 'razor', false)
 
     // Add files copied from https://github.com/dell-asm/asm-deployer
     fileTree(dir: "${buildDir}/files", include: '**').visit {
