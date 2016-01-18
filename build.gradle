@@ -114,6 +114,10 @@ task rpm(dependsOn: copyAsmDeployer) << {
     // Torquebox should not need to write any other files into /opt/asm-deployer
     rpmBuilder.addDirectory("/opt/asm-deployer", 0775, Directive.NONE, 'root', 'razor', false)
 
+    // Add NFS directories where built ISOs can be placed by asm-deployer
+    rpmBuilder.addDirectory("/var/nfs/iso", 0755, Directive.NONE, 'root', 'root', false)
+    rpmBuilder.addDirectory("/var/nfs/iso/generated", 0755, Directive.NONE, 'razor', 'razor', false)
+
     // Add files copied from https://github.com/dell-asm/asm-deployer
     fileTree(dir: "${buildDir}/files", include: '**').visit {
         if (it.file.isDirectory() && !it.file.name.equals(".svn")) {
