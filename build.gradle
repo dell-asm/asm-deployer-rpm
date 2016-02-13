@@ -121,8 +121,7 @@ task rpm(dependsOn: copyAsmDeployer) << {
         } else if (it.file.isFile()) {
             if ('lib/asm/scvmm_cluster_ip.rb' == it.path ||
                 'lib/asm/scvmm_macaddress.rb' == it.path ||
-                'scripts/puppet_certname.sh' == it.path ||
-                'scripts/decrypt_secretid.rb' == it.path) {
+                it.path.startsWith('scripts/')) {
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0755, Directive.NONE, 'root', 'razor')
             } else if (it.path == "nagios/nagios-export.rb") {
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0755, Directive.NONE, 'root', 'root')
