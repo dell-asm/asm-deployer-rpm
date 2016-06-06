@@ -136,6 +136,8 @@ task rpm(dependsOn: copyAsmDeployer) << {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check-racadm.rb", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/check_snmp.rb") {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check_snmp.rb", it.file, 0755, Directive.NONE, 'root', 'root')
+            } else if (it.path == "nagios/check_navisec.rb") {
+                rpmBuilder.addFile("/usr/lib64/nagios/plugins/check_navisec.rb", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/check-wsman.rb") {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check-wsman.rb", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/check_esxi_hardware.py") {
