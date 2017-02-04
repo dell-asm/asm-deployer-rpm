@@ -15,13 +15,6 @@ touch /etc/carbon/storage-aggregation.conf
 /bin/sed -i 's:LOG_CACHE_QUEUE_SORTS = True:LOG_CACHE_QUEUE_SORTS = False:' /etc/carbon/carbon.conf
 /bin/sed -i 's:ENABLE_LOGROTATION = True:ENABLE_LOGROTATION = False:' /etc/carbon/carbon.conf
 
-# Update Gemfile.lock for Torquebox 3.0.2
-GEMFILE_LOCK=/opt/asm-deployer/Gemfile.lock
-if [ -e $GEMFILE_LOCK ]
-then
-  sed -i -e 's/\(torque.*\)\((= 3.0.[0-9])\)/\1(= 3.0.2)/' $GEMFILE_LOCK
-fi
-
 grep -q ^SECRET_KEY /etc/graphite-web/local_settings.py
 
 if [ $? -eq 1 ]
@@ -50,3 +43,7 @@ EOF
 
   chkconfig carbon-cache on
 fi
+
+# Pick up local gem changes from Dell-ASM-Gems
+cd /opt/asm-deployer
+/opt/jruby-1.7.8/bin/bundle update --local
