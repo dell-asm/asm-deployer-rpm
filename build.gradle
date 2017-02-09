@@ -70,6 +70,7 @@ task rpm(dependsOn: copyAsmDeployer) << {
 
     //Depends on dell-asm-util gem (and any additional ones needed) to be installed
     rpmBuilder.addDependencyMore('Dell-ASM-Gems', '0.1.0')
+    rpmBuilder.addDependencyMore('Dell-ASM-jruby9k', '9')
 
     // Depends on nagios rpm to bring the correctly selinux tagged plugin dirs etc
     rpmBuilder.addDependencyMore('nagios', '3.5.1')
