@@ -49,4 +49,4 @@ fi
 
 # Pick up local gem changes from Dell-ASM-Gems
 cd /opt/asm-deployer
-/opt/jruby-1.7.8/bin/bundle update --local
+env PATH=/opt/jruby/9k/bin:$PATH bundle update --local
