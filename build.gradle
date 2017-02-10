@@ -111,9 +111,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
     rpmBuilder.addDirectory("/opt/Dell/ASM/modules", 0755, Directive.NONE, 'nobody', 'nobody', false)
 
     // Install directory.
-    // Installed as root:razor with 0775 so that torquebox can write the Gemfile.lock file.
-    // Torquebox should not need to write any other files into /opt/asm-deployer
-    rpmBuilder.addDirectory("/opt/asm-deployer", 0775, Directive.NONE, 'root', 'razor', false)
+    rpmBuilder.addDirectory("/opt/asm-deployer", 0755, Directive.NONE, 'root', 'razor', false)
+
+    rpmBuilder.addFile("/opt/asm-deployer/Gemfile.lock", file("files/Gemfile.lock"), 0644, Directive.NONE, 'root', 'razor')
 
     // Add files copied from https://github.com/dell-asm/asm-deployer
     fileTree(dir: "${buildDir}/files", include: '**').visit {
