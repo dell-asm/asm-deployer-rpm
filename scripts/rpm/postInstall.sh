@@ -46,7 +46,3 @@ EOF
 
   chkconfig carbon-cache on
 fi
-
-# Pick up local gem changes from Dell-ASM-Gems
-cd /opt/asm-deployer
-env PATH=/opt/jruby/9k/bin:$PATH bundle update --local
