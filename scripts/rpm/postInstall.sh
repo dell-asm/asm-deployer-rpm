@@ -46,3 +46,7 @@ EOF
 
   chkconfig carbon-cache on
 fi
+
+# Update asm-deployer database
+psql -U orion asm_dev < /opt/asm-deployer/db/schema.sql > /dev/null
+
