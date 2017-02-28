@@ -146,6 +146,8 @@ task rpm(dependsOn: copyAsmDeployer) << {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check_unisphere.rb", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/check-wsman.rb") {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check-wsman.rb", it.file, 0755, Directive.NONE, 'root', 'root')
+            } else if (it.path == "nagios/check_esxi_maintmode.rb") {
+                rpmBuilder.addFile("/usr/lib64/nagios/plugins/check_esxi_maintmode.rb", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/check_esxi_hardware.py") {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check_esxi_hardware.py", it.file, 0755, Directive.NONE, 'root', 'root')
             } else if (it.path == "nagios/load_short_circuit.sh") {
