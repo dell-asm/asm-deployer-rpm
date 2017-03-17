@@ -118,6 +118,7 @@ task rpm(dependsOn: copyAsmDeployer) << {
     //Add cloneVM files
     rpmBuilder.addFile("/var/lib/razor/repo-store/puppet-agent/cloneVM/puppet_certname.sh", file("${buildDir}/files/scripts/puppet_certname.sh"), 0755, Directive.NONE, 'razor', 'razor')
     rpmBuilder.addFile("/var/lib/razor/repo-store/puppet-agent/cloneVM/puppet_certname.rb", file("${buildDir}/files/scripts/puppet_certname.rb"), 0755, Directive.NONE, 'razor', 'razor')
+    rpmBuilder.addFile("/var/lib/razor/repo-store/puppet-agent/cloneVM/puppet_certname.bat", file("${buildDir}/files/scripts/puppet_certname.bat"), 0644, Directive.NONE, 'razor', 'razor')
 
 
     // Add files copied from https://github.com/dell-asm/asm-deployer
