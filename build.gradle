@@ -1,6 +1,6 @@
 import groovy.text.GStringTemplateEngine
-import org.freecompany.redline.payload.*
-import org.freecompany.redline.header.*
+import org.redline_rpm.payload.*
+import org.redline_rpm.header.*
 
 // https://github.com/nebula-plugins/gradle-ospackage-plugin/issues/59
 Contents.addBuiltinDirectory('/etc/httpd/conf.d/')
@@ -30,7 +30,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'org.redline-rpm:redline:1.1.12'
+        classpath 'org.redline-rpm:redline:1.2.4'
     }
 }
 
@@ -63,7 +63,7 @@ task rpm(dependsOn: copyAsmDeployer) << {
     profile_d_file << "${project.rpm_packageName.tr('-', '_')}_RELEASE=$project.buildNumber\n"
     profile_d_file << "export ${project.rpm_packageName.tr('-', '_')}_RELEASE\n"
 
-    org.freecompany.redline.Builder rpmBuilder = new org.freecompany.redline.Builder()
+    org.redline_rpm.Builder rpmBuilder = new org.redline_rpm.Builder()
 
     // Depends on razor rpm having set up razor user and torquebox
     rpmBuilder.addDependencyMore('Dell-ASM-razor-server', '1.7.8')
@@ -74,8 +74,8 @@ task rpm(dependsOn: copyAsmDeployer) << {
 
     // Depends on nagios rpm to bring the correctly selinux tagged plugin dirs etc
     rpmBuilder.addDependencyMore('nagios', '3.5.1')
-    rpmBuilder.addDependencyMore('nagios-plugins-nrpe', '2.15')
-    rpmBuilder.addDependencyMore('nagios-plugins-ping', '1.4.16')
+    rpmBuilder.addDependencyMore('nagios-plugins-ping', '2.1.4')
+    rpmBuilder.addDependencyMore('nagios-plugins-disk', '2.1.4')
 
     // Dependencies for the nagios plugins
     rpmBuilder.addDependencyMore('freeipmi', '1.2.1')
@@ -90,6 +90,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
 
     // iPXE source code for building iPXE ISOs
     rpmBuilder.addDependencyMore('ipxe-devel', '20160117')
+
+    // Obsolete old rpms
+    rpmBuilder.addObsoletesMore("nagios-plugins-nrpe", "2.15")
 
     // Directory where REST service will write deployment information
     rpmBuilder.addDirectory("/opt/Dell/ASM/deployments", 0775, Directive.NONE, 'razor', 'razor', false)
