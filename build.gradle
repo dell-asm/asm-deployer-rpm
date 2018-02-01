@@ -84,7 +84,6 @@ task rpm(dependsOn: copyAsmDeployer) << {
 
     // Graphite dependencies
     rpmBuilder.addDependencyMore('graphite-web', '0.9.12')
-    rpmBuilder.addDependencyMore('graphite-web-selinux', '0.9.12')
     rpmBuilder.addDependencyMore('python-whisper', '0.9.12')
     rpmBuilder.addDependencyMore('python-carbon', '0.9.12')
 
