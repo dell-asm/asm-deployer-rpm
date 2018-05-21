@@ -115,7 +115,7 @@ task rpm(dependsOn: copyAsmDeployer) << {
     // Install directory.
     rpmBuilder.addDirectory("/opt/asm-deployer", 0755, Directive.NONE, 'root', 'razor', false)
 
-    rpmBuilder.addFile("/opt/asm-deployer/Gemfile.lock", file("files/Gemfile.lock"), 0644, -1, Directive.NONE, 'root', 'razor', false)
+    rpmBuilder.addFile("/opt/asm-deployer/Gemfile.lock", file("files/Gemfile.lock"), 0644, -1, Directive.NONE, 'razor', 'razor', false)
 
     //Add cloneVM files
     rpmBuilder.addFile("/var/lib/razor/repo-store/puppet-agent/cloneVM/puppet_certname.sh", file("${buildDir}/files/scripts/puppet_certname.sh"), 0755, -1, Directive.NONE, 'razor', 'razor', false)
