@@ -11,6 +11,7 @@ buildscript {
     ext {
         env = System.getenv()
         buildNumber = env.BUILD_NUMBER ? env.BUILD_NUMBER.toString() : ((int) (System.currentTimeMillis() / 1000)).toString()
+        product_prefix  = env.PRODUCT_PREFIX  ? env.PRODUCT_PREFIX  : 'ASM'
         BASE_REPO_URL = hasProperty('BASE_REPO_URL') ? BASE_REPO_URL : 'http://artifactory.asm.delllabs.net:8080/artifactory'
         PLUGINS_REPO = hasProperty('PLUGINS_REPO') ? asmnext - trunk - external : 'plugins-release'
         PLUGINS_REPO_URL = hasProperty('PLUGINS_REPO_URL') ? PLUGINS_REPO_URL : "${BASE_REPO_URL}/${PLUGINS_REPO}"
@@ -66,11 +67,11 @@ task rpm(dependsOn: copyAsmDeployer) << {
     org.redline_rpm.Builder rpmBuilder = new org.redline_rpm.Builder()
 
     // Depends on razor rpm having set up razor user and torquebox
-    rpmBuilder.addDependencyMore('Dell-ASM-razor-server', '1.7.8')
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-razor-server", '1.7.8')
 
     //Depends on dell-asm-util gem (and any additional ones needed) to be installed
-    rpmBuilder.addDependencyMore('Dell-ASM-Gems', '0.1.0')
-    rpmBuilder.addDependencyMore('Dell-ASM-jruby9k', '9')
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-Gems", '0.1.0')
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-jruby9k", '9')
 
     // Depends on nagios rpm to bring the correctly selinux tagged plugin dirs etc
     rpmBuilder.addDependencyMore('nagios', '3.5.1')
@@ -176,7 +177,7 @@ task rpm(dependsOn: copyAsmDeployer) << {
         }
     }
 
-    rpmBuilder.addDependencyMore('Dell-ASM-razor-server-repo-store', project.rpm_version)
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-razor-server-repo-store", project.rpm_version)
     rpmBuilder.setPackage(project.rpm_packageName, project.rpm_version, project.buildNumber.toString())
     rpmBuilder.setType(RpmType.BINARY)
     rpmBuilder.setPlatform(Architecture.NOARCH, 'LINUX')
