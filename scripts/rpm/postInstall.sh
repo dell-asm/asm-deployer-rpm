@@ -18,6 +18,10 @@ touch /etc/carbon/storage-aggregation.conf
 /bin/sed -i 's:LOG_CACHE_QUEUE_SORTS = True:LOG_CACHE_QUEUE_SORTS = False:' /etc/carbon/carbon.conf
 /bin/sed -i 's:ENABLE_LOGROTATION = True:ENABLE_LOGROTATION = False:' /etc/carbon/carbon.conf
 
+# executing by default below permissions without validating SECRET_KEY
+chown -R csadmin:csadmin /var/lib/graphite-web/
+chown -R csadmin:csadmin /var/log/graphite-web/
+
 grep -q ^SECRET_KEY /etc/graphite-web/local_settings.py
 
 if [ $? -eq 1 ]
@@ -26,8 +30,8 @@ then
   echo "TIME_ZONE = 'UTC'" >> /etc/graphite-web/local_settings.py
 
   python /usr/lib/python2.7/site-packages/graphite/manage.py syncdb --noinput
-  chown -R csadmin:csadmin /var/lib/graphite-web/
-
+  
+  
   cat << EOF > /etc/carbon/storage-schemas.conf
 [carbon]
 pattern = ^carbon\.
