@@ -26,8 +26,8 @@ then
   echo "TIME_ZONE = 'UTC'" >> /etc/graphite-web/local_settings.py
 
   python /usr/lib/python2.7/site-packages/graphite/manage.py syncdb --noinput
-  chown -R csadmin:csadmin /var/lib/graphite-web/
-
+  
+  
   cat << EOF > /etc/carbon/storage-schemas.conf
 [carbon]
 pattern = ^carbon\.
@@ -50,3 +50,6 @@ fi
 # Update asm-deployer database
 psql -U orion asm_dev < /opt/asm-deployer/db/schema.sql > /dev/null
 
+# executing by default below permissions without validating SECRET_KEY
+chown -R csadmin:csadmin /var/lib/graphite-web/
+chown -R csadmin:csadmin /var/log/graphite-web/
