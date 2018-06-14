@@ -18,10 +18,6 @@ touch /etc/carbon/storage-aggregation.conf
 /bin/sed -i 's:LOG_CACHE_QUEUE_SORTS = True:LOG_CACHE_QUEUE_SORTS = False:' /etc/carbon/carbon.conf
 /bin/sed -i 's:ENABLE_LOGROTATION = True:ENABLE_LOGROTATION = False:' /etc/carbon/carbon.conf
 
-# executing by default below permissions without validating SECRET_KEY
-chown -R csadmin:csadmin /var/lib/graphite-web/
-chown -R csadmin:csadmin /var/log/graphite-web/
-
 grep -q ^SECRET_KEY /etc/graphite-web/local_settings.py
 
 if [ $? -eq 1 ]
@@ -54,3 +50,6 @@ fi
 # Update asm-deployer database
 psql -U orion asm_dev < /opt/asm-deployer/db/schema.sql > /dev/null
 
+# executing by default below permissions without validating SECRET_KEY
+chown -R csadmin:csadmin /var/lib/graphite-web/
+chown -R csadmin:csadmin /var/log/graphite-web/
