@@ -11,15 +11,15 @@ buildscript {
     ext {
         env = System.getenv()
         buildNumber = env.BUILD_NUMBER ? env.BUILD_NUMBER.toString() : ((int) (System.currentTimeMillis() / 1000)).toString()
-        product_prefix  = env.PRODUCT_PREFIX  ? env.PRODUCT_PREFIX  : 'ASM'
+        product_prefix  = env.PRODUCT_PREFIX  ? env.PRODUCT_PREFIX  : 'VxFM'
         BASE_REPO_URL = hasProperty('BASE_REPO_URL') ? BASE_REPO_URL : 'http://artifactory.asm.delllabs.net:8080/artifactory'
         PLUGINS_REPO = hasProperty('PLUGINS_REPO') ? asmnext - trunk - external : 'plugins-release'
         PLUGINS_REPO_URL = hasProperty('PLUGINS_REPO_URL') ? PLUGINS_REPO_URL : "${BASE_REPO_URL}/${PLUGINS_REPO}"
-        rpm_packageName = env.RPM_PACKAGENAME ? env.RPM_PACKAGENAME : 'Dell-ASM-asm-deployer'
-        rpm_description = env.RPM_DESCRIPTION ? env.RPM_DESCRIPTION : 'asm-deployer for Dell ASM'
-        rpm_summary = env.RPM_SUMMARY ? env.RPM_SUMMARY : 'asm-deployer for Dell ASM'
-        rpm_version = env.RPM_VERSION ? env.RPM_VERSION : '8.4.0'
-        rpm_vendor = env.RPM_VENDOR ? env.RPM_VENDOR : 'Dell, Inc.'
+        rpm_packageName = env.RPM_PACKAGENAME ? env.RPM_PACKAGENAME : 'Dell-VxFM-asm-deployer'
+        rpm_description = env.RPM_DESCRIPTION ? env.RPM_DESCRIPTION : 'asm-deployer for Dell VxFlex Manager'
+        rpm_summary = env.RPM_SUMMARY ? env.RPM_SUMMARY : 'asm-deployer for Dell VxFlex Manager'
+        rpm_version = env.RPM_VERSION ? env.RPM_VERSION : '3.0.0'
+        rpm_vendor = env.RPM_VENDOR ? env.RPM_VENDOR : 'Dell EMC, Inc.'
         rpm_url = env.RPM_URL ? env.RPM_URL : 'http://www.dell.com/'
         rpm_license = env.RPM_LICENSE ? env.RPM_LICENSE : 'DELL END USER LICENSE AGREEMENT - TYPE A'
         rpm_packager = env.RPM_PACKAGER ? env.RPM_PACKAGER : 'vsd_buildmeisters'
