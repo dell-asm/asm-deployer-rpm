@@ -66,8 +66,16 @@ task rpm(dependsOn: copyAsmDeployer) << {
 
     org.redline_rpm.Builder rpmBuilder = new org.redline_rpm.Builder()
 
+// Set dependency to use major version (like 8.2) instead
+    def major_version = project.rpm_version
+    def matcher = major_version =~/^(\d+[.]\d+).*/
+    if (matcher.matches()) {
+	major_version = matcher[0][1]
+    }
+
     // Depends on razor rpm having set up razor user and torquebox
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-razor-server", '1.7.8')
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-SrsConnector", major_version)
 
     //Depends on dell-asm-util gem (and any additional ones needed) to be installed
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-Gems", '0.1.0')
