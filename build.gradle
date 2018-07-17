@@ -77,6 +77,10 @@ task rpm(dependsOn: copyAsmDeployer) << {
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-razor-server", '1.7.8')
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-SrsConnector", major_version)
 
+    // Depends zypprepo puppet module
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-puppet-module-puppet-zypprepo", major_version)
+
+
     //Depends on dell-asm-util gem (and any additional ones needed) to be installed
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-Gems", '0.1.0')
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-jruby9k", '9')
