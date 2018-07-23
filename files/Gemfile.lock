@@ -45,7 +45,7 @@ GEM
       domain_name (~> 0.5)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    ipaddress (~> 0.8.3)
+    ipaddress (0.8.3)
     jdbc-postgres (42.1.4)
     jruby-openssl (0.9.21-java)
     json (2.1.0-java)
