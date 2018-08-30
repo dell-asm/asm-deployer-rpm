@@ -77,6 +77,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-razor-server", '1.7.8')
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-SrsConnector", major_version)
 
+    // Dependencies for the Phone Home Client
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-PhdClient", major_version)
+
     // Depends zypprepo puppet module
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-puppet-module-puppet-zypprepo", major_version)
 
