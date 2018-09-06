@@ -80,6 +80,10 @@ task rpm(dependsOn: copyAsmDeployer) << {
     // Dependencies for the Phone Home Client
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-PhdClient", major_version)
 
+    // Depends on Metrics and Telemetry Services
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-Telemetry", major_version)
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-Metrics", major_version)
+
     // Depends zypprepo puppet module
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-puppet-module-puppet-zypprepo", major_version)
 
