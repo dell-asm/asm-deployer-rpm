@@ -84,6 +84,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-Telemetry", major_version)
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-Metrics", major_version)
 
+    // Depends on VxFM ElasticSearch search
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-ElasticSearch", major_version)
+
     // Depends zypprepo puppet module
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-puppet-module-puppet-zypprepo", major_version)
 
