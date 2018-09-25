@@ -87,6 +87,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
     // Depends on VxFM ElasticSearch search
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-ElasticSearch", major_version)
 
+    // Python Modules requirement
+     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-PythonModules", major_version)
+
     // Depends zypprepo puppet module
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-puppet-module-puppet-zypprepo", major_version)
 
