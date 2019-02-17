@@ -192,6 +192,10 @@ task rpm(dependsOn: copyAsmDeployer) << {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/process_nagios_status.rb", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/asm_nagios.cron") {
                 rpmBuilder.addFile("/etc/cron.d/asm_nagios", it.file, 0644, -1, Directive.NONE, 'root', 'root', false)
+            } else if (it.path == "nagios/remove_stale_logs.sh") {
+                rpmBuilder.addFile("/usr/lib64/nagios/plugins/remove_stale_logs.sh", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
+            } else if (it.path == "nagios/asm_nagios_remove_stale_logs.cron") {
+                rpmBuilder.addFile("/etc/cron.d/asm_nagios_remove_stale_logs.cron", it.file, 0644, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/graphite-web.conf") {
                 rpmBuilder.addFile("/etc/httpd/conf.d/asm-graphite-web.conf", it.file, 0644, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/logrotate.graphite") {
