@@ -53,3 +53,7 @@ psql -U orion asm_dev < /opt/asm-deployer/db/schema.sql > /dev/null
 # executing by default below permissions without validating SECRET_KEY
 chown -R csadmin:csadmin /var/lib/graphite-web/
 chown -R csadmin:csadmin /var/log/graphite-web/
+
+# Updates for nagios
+grep -q asm.cfg /etc/nagios/nagios.cfg || echo "cfg_file=/etc/nagios/objects/asm.cfg" >> /etc/nagios/nagios.cfg
+chown -R nagios:nagios /var/log/nagios/
