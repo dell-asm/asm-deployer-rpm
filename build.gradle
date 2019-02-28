@@ -18,7 +18,7 @@ buildscript {
         rpm_packageName = env.RPM_PACKAGENAME ? env.RPM_PACKAGENAME : 'Dell-VxFM-asm-deployer'
         rpm_description = env.RPM_DESCRIPTION ? env.RPM_DESCRIPTION : 'asm-deployer for Dell VxFlex Manager'
         rpm_summary = env.RPM_SUMMARY ? env.RPM_SUMMARY : 'asm-deployer for Dell VxFlex Manager'
-        rpm_version = env.RPM_VERSION ? env.RPM_VERSION : '3.0.0'
+        rpm_version = env.RPM_VERSION ? env.RPM_VERSION : '3.2.0'
         rpm_vendor = env.RPM_VENDOR ? env.RPM_VENDOR : 'Dell EMC, Inc.'
         rpm_url = env.RPM_URL ? env.RPM_URL : 'http://www.dell.com/'
         rpm_license = env.RPM_LICENSE ? env.RPM_LICENSE : 'DELL END USER LICENSE AGREEMENT - TYPE A'
