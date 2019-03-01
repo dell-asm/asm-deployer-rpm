@@ -9,6 +9,11 @@
 /bin/sed -i 's:cfg_file=/etc/nagios/objects/localhost.cfg:#cfg_file=/etc/nagios/objects/localhost.cfg:' /etc/nagios/nagios.cfg
 /bin/sed -i 's:max_concurrent_checks=4:max_concurrent_checks=0:' /etc/nagios/nagios.cfg
 
+# Grant sudo access to script to build iPXE UEFi floppy
+if [ $(grep -c "%razor ALL=NOPASSWD:/opt/asm-deployer/scripts/build_bootable_floppy.sh" /etc/sudoers) -eq 0 ]; then
+  echo "%razor ALL=NOPASSWD:/opt/asm-deployer/scripts/build_bootable_floppy.sh" >> /etc/sudoers
+fi
+
 /sbin/restorecon -v /usr/lib64/nagios/plugins/*
 
 # configure graphite
