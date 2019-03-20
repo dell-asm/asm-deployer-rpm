@@ -116,6 +116,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
     // iPXE source code for building iPXE ISOs
     rpmBuilder.addDependencyMore('ipxe-devel', '20160117')
 
+    // Elasticsearch dependency
+    rpmBuilder.addDependencyMore('logstash', '6.6.1')
+
     // Obsolete old rpms
     rpmBuilder.addObsoletesMore("nagios-plugins-nrpe", "2.15")
 
