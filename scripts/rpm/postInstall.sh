@@ -62,3 +62,13 @@ chown -R csadmin:csadmin /var/log/graphite-web/
 # Updates for nagios
 grep -q asm.cfg /etc/nagios/nagios.cfg || echo "cfg_file=/etc/nagios/objects/asm.cfg" >> /etc/nagios/nagios.cfg
 chown -R nagios:nagios /var/log/nagios/
+
+# Configure logstash to start automatically when the system boots up
+echo 'systemctl daemon-reload'
+systemctl daemon-reload
+
+echo 'Enabling logstash.service'
+systemctl enable logstash.service
+
+echo 'Starting logstash'
+systemctl start logstash.service
