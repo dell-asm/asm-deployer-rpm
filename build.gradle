@@ -193,8 +193,8 @@ task rpm(dependsOn: copyAsmDeployer) << {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/load_short_circuit.sh", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/process_nagios_status.rb") {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/process_nagios_status.rb", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
-            } else if (it.path == "nagios/check_vxflex_sds_health.rb") {
-                rpmBuilder.addFile("/usr/lib64/nagios/plugins/check_vxflex_sds_health.rb", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
+            } else if (it.path == "nagios/check_vxflex_health.rb") {
+                rpmBuilder.addFile("/usr/lib64/nagios/plugins/check_vxflex_health.rb", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/asm_nagios.cron") {
                 rpmBuilder.addFile("/etc/cron.d/asm_nagios", it.file, 0644, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/remove_stale_logs.sh") {
