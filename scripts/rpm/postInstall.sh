@@ -8,6 +8,8 @@
 /bin/sed -i 's:enable_flap_detection=1:enable_flap_detection=0:' /etc/nagios/nagios.cfg
 /bin/sed -i 's:cfg_file=/etc/nagios/objects/localhost.cfg:#cfg_file=/etc/nagios/objects/localhost.cfg:' /etc/nagios/nagios.cfg
 /bin/sed -i 's:max_concurrent_checks=4:max_concurrent_checks=0:' /etc/nagios/nagios.cfg
+/bin/sed -i 's/cfg_dir=\/etc\/nagios\/conf.d/ /' /etc/nagios/nagios.cfg
+/bin/sed -i 's/status_file=\/var\/log\/nagios\/status.dat/status_file=\/var\/spool\/nagios\/status.dat/' /etc/nagios/nagios.cfg
 
 # Grant sudo access to script to build iPXE UEFi floppy
 if [ $(grep -c "%razor ALL=NOPASSWD:/opt/asm-deployer/scripts/build_bootable_floppy.sh" /etc/sudoers) -eq 0 ]; then
@@ -62,6 +64,7 @@ chown -R csadmin:csadmin /var/log/graphite-web/
 # Updates for nagios
 grep -q asm.cfg /etc/nagios/nagios.cfg || echo "cfg_file=/etc/nagios/objects/asm.cfg" >> /etc/nagios/nagios.cfg
 chown -R nagios:nagios /var/log/nagios/
+chown -R nagios:nagios /var/spool/nagios/
 
 # Configure logstash to start automatically when the system boots up
 echo 'systemctl daemon-reload'
