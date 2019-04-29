@@ -1,8 +1,10 @@
 # configure nagios
 /sbin/chkconfig nagios on
 
-/sbin/chkconfig --add asm-deployer
-/sbin/chkconfig asm-deployer on
+# Configure asm-deployer service
+rm /etc/rc.d/init.d/asm-deployer
+/usr/bin/systemctl daemon-reload
+/usr/bin/systemctl enable asm-deployer.service
 
 /bin/sed -i 's:enable_notifications=1:enable_notifications=0:' /etc/nagios/nagios.cfg
 /bin/sed -i 's:enable_flap_detection=1:enable_flap_detection=0:' /etc/nagios/nagios.cfg
