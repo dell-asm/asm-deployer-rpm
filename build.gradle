@@ -168,7 +168,7 @@ task rpm(dependsOn: copyAsmDeployer) << {
             } else if (it.path == "asm-deployer.init") {
                 rpmBuilder.addFile("/opt/Dell/scripts/asm-deployer", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "asm-deployer.service") {
-                rpmBuilder.addFile("/etc/systemd/system/asm-deployer.service", it.file, 0744, -1, Directive.NONE, 'root', 'root', false)
+                rpmBuilder.addFile("/etc/systemd/system/asm-deployer.service", it.file, 0644, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/nagios-export.rb") {
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/poll_idrac8_sensors.rb") {
