@@ -90,6 +90,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
     // Python Modules requirement
      rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-PythonModules", major_version)
 
+    // add cloudlink dependency
+    rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-ansible-cloudlink", major_version)
+
     // Depends zypprepo puppet module
     rpmBuilder.addDependencyMore("Dell-${project.product_prefix}-puppet-module-puppet-zypprepo", major_version)
 
