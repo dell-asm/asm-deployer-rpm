@@ -181,8 +181,8 @@ task rpm(dependsOn: copyAsmDeployer) << {
                 rpmBuilder.addFile("/opt/asm-deployer/${it.path}", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/check-ipmi.rb") {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check-ipmi.rb", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
-            } else if (it.path == "nagios/check-racadm.rb") {
-                rpmBuilder.addFile("/usr/lib64/nagios/plugins/check-racadm.rb", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
+            } else if (it.path == "nagios/check_racadm.rb") {
+                rpmBuilder.addFile("/usr/lib64/nagios/plugins/check_racadm.rb", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/check_snmp.rb") {
                 rpmBuilder.addFile("/usr/lib64/nagios/plugins/check_snmp.rb", it.file, 0755, -1, Directive.NONE, 'root', 'root', false)
             } else if (it.path == "nagios/check_navisec.rb") {
