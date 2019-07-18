@@ -125,6 +125,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
     // Elasticsearch dependency
     rpmBuilder.addDependencyMore('logstash', '6.6.1')
 
+    // vxfm-dellos10-utils dependency
+    rpmBuilder.addDependencyMore("Dell-VxFM-dellos10-utils", major_version)
+
     // Obsolete old rpms
     rpmBuilder.addObsoletesMore("nagios-plugins-nrpe", "2.15")
 
