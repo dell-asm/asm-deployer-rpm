@@ -65,3 +65,17 @@ grep -q asm.cfg /etc/nagios/nagios.cfg || echo "cfg_file=/etc/nagios/objects/asm
 chown -R nagios:nagios /var/log/nagios/
 chown -R nagios:nagios /var/spool/nagios/
 
+# Set asm-deployer-init log to rotate daily, compress, keep 1 week.
+# The 'copytruncate' option tells logrotate to truncate the existing
+# log file after making a copy thus leaving the old file
+# open for logging to continue. See the logrotate man page for
+# more details.
+echo "/var/log/razor/asm-deployer-init.log {
+  copytruncate
+  daily
+  rotate 7
+  compress
+  missingok
+  size 50M
+}" > /etc/logrotate.d/asm-deployer
+
