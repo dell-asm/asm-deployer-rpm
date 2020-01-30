@@ -155,6 +155,9 @@ task rpm(dependsOn: copyAsmDeployer) << {
 
     rpmBuilder.addFile("/opt/asm-deployer/Gemfile.lock", file("files/Gemfile.lock"), 0644, -1, Directive.NONE, 'razor', 'razor', false)
 
+    // Add custom ansible config to the razor home directory (overwrites any config in /etc/ansible/ansible.cfg)
+    rpmBuilder.addFile("/home/razor/.ansible.cfg", file("files/.ansible.cfg"), 0644, -1, Directive.NONE, 'razor', 'razor', false)
+
     //Add cloneVM files
     rpmBuilder.addFile("/var/lib/razor/repo-store/puppet-agent/cloneVM/puppet_certname.sh", file("${buildDir}/files/scripts/puppet_certname.sh"), 0755, -1, Directive.NONE, 'razor', 'razor', false)
     rpmBuilder.addFile("/var/lib/razor/repo-store/puppet-agent/cloneVM/puppet_certname.rb", file("${buildDir}/files/scripts/puppet_certname.rb"), 0755, -1, Directive.NONE, 'razor', 'razor', false)
